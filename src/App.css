@@ -1,95 +1,179 @@
+
 * {
   font-family: "Roboto", sans-serif;
   padding: 0;
   margin: 0;
 }
 
-.ui.cards > .card > .image {
-  height: 250px;
+.ui .cards .card {
+  height: 400px;
+  width: 100%;
   padding: 20px;
-  background: #fff;
-  margin: auto;
+  background: #f4efef;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  text-align: center;
 }
-.ui.cards > .card > .image > img {
-  height: 100%;
-  max-width: 100%;
-  width: auto;
+
+.ui .cards .card .image img {
+  height: 250px;
+  width: 300px;
 }
-.ui.cards > .card > .content > .header {
+
+.ui .cards .card .content .header {
   height: 48px;
   overflow: hidden;
-  margin-bottom: 5px;
+  margin-bottom: 10px; 
+  font-size: 1rem;
 }
-.ui.cards > .card > .content > .description {
-  height: 36px;
-  margin-bottom: 0px;
-  overflow: hidden;
-}
-.ui.cards > .card .meta.price {
-  margin-bottom: 5px;
+
+.ui .cards .card .meta .price {
+  margin-bottom: 10px; 
   font-size: 18px;
   color: #333;
   font-weight: 600;
+  background-color: transparent; 
+  border: none; 
 }
 
-.ui.cards > .card .meta.price > a {
+.product-card a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.ui .cards .card .meta .price a {
   font-size: 1.3rem;
   color: #222;
 }
 
-.ui.menu.fixed {
-  height: 60px;
-  padding-top: 15px;
-}
-
 .ui.grid.container {
-  margin-top: 45px;
-  display: grid;
-  grid-template-columns: repeat(4,1fr);
+  padding: 20px;
 }
 
-.ui.grid > .row {
-  background: #fff;
-}
-.ui.grid > .row > .column.lp {
-  padding: 20px 40px 20px 20px;
-  align-self: flex-start;
-}
-.ui.grid > .row > .column.rp {
-  padding: 20px 20px 20px 40px;
-  text-align: left;
-  align-self: flex-start;
+.ui.placeholder.segment {
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.ui.grid > .row > .column > img,
-.ui.grid > .row > img {
-  height: 100%;
+.ui.two.column.stackable.center.aligned.grid {
+  text-align: center;
 }
-.ui.placeholder .header:not(:first-child):before,
-.ui.placeholder .image:not(:first-child):before,
-.ui.placeholder .paragraph:not(:first-child):before {
+
+.column.lp, .column.rp {
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+}
+
+.column.lp {
+  padding-right: 20px;
+}
+
+.column.rp {
+  padding-left: 20px;
+}
+
+.ui.fluid.image {
+  max-width: 100%;
+  height: auto;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 10px; 
+}
+
+.ui.teal.tag.label {
+  font-size: 1.5rem;
+  padding: 10px;
+  color: rgb(18, 17, 17);
+  border-radius: 5px;
+  margin-bottom: 15px; 
+}
+
+h3.ui.brown.block.header {
+  font-size: 1.2rem;
+  color: #6d4c41;
+  margin-bottom: 15px; 
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #555;
+  margin-bottom: 20px; 
+}
+
+.ui.vertical.animated.button {
+  background-color: #1e8c8c;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.ui.vertical.animated.button:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #155a5a;
+  z-index: -1;
+  transition: background-color 0.3s;
+}
+
+.ui.vertical.animated.button:hover:before {
+  background-color: #1e8c8c;
+}
+
+.ui.vertical.animated.button:hover {
+  transform: scale(1.05);
+}
+
+.ui.vertical.animated.button .visible.content {
+  font-size: 1rem;
+}
+
+.ui.vertical.animated.button .hidden.content {
   display: none;
 }
 
-.ui.label,
-.ui.labels .label {
-  font-size: 22px;
+.ui.vertical.animated.button:focus {
+  outline: none;
 }
 
-.column.rp h1 {
-  color: #333;
+.carousel .slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.column.rp p {
-  font-size: 18px;
-  color: #777;
+
+.carousel .slide .product-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
-.ui.placeholder.segment .column .button,
-.ui.placeholder.segment .column .field,
-.ui.placeholder.segment .column textarea,
-.ui.placeholder.segment .column > .ui.input {
-  background-color: #ff3e6c;
-  border: 1px solid #ff3e6c;
-  color: #fff;
-  font-size: 18px;
-  margin-left: 0;
+
+.product-card {
+  flex: 1 1 16%;
+  margin: 5px;
+  box-sizing: border-box;
+}
+
+.product-card .card {
+  width: 100%;
 }

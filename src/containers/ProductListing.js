@@ -3,6 +3,7 @@ import axios from 'axios';
 import { useDispatch, useSelector } from "react-redux";
 import { setProducts } from '../redux/actions/productsActions'
 import ProductComponent from "./ProductComponent";
+import "../App.css";
 
 const ProductListing = () => {
     const products= useSelector((state) => state.allProducts.products);
